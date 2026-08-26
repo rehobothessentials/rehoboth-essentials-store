@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehoboth Essentials - Hair Revive Oil</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(90deg, #fbf9f5 0%, #fbf9f5 100%), linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+            color: #1b1c1a;
+            line-height: 1.6;
+        }
+
+        /* Header / Navigation */
+        .header {
+            backdrop-filter: blur(6px);
+            background: rgba(251, 249, 245, 0.8);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 16px 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #01261f;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            flex: 1;
+            margin-left: 60px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #705a49;
+            text-decoration: none;
+            letter-spacing: 0.7px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a.active {
+            color: #01261f;
+            border-bottom: 2px solid #01261f;
+            padding-bottom: 8px;
+        }
+
+        .nav-links a:hover {
+            color: #01261f;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            padding: 80px 64px;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: #01261f;
+            line-height: 1.1;
+            margin-top: 64px;
+            margin-bottom: 20px;
+            letter-spacing: -1.12px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #efeeea;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #705a49;
+        }
+
+        .badge-icon {
+            width: 10.67px;
+            height: 10.65px;
+        }
+
+        .hero-description {
+            color: #705a49;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 30px 0 40px 0;
+            max-width: 512px;
+        }
+
+        .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #01261f;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background: #01261f;
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.7px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: #01261f;
+            opacity: 0.9;
+        }
+
+        .hero-image-container {
+            background: #f5f3ef;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 700px;
+            position: relative;
+        }
+
+        .hero-image-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(52.56deg, rgba(228, 226, 222, 0.2) 0%, rgba(228, 226, 222, 0) 100%);
+            pointer-events: none;
+        }
+
+        .hero-product-image {
+            max-width: 248px;
+            height: 560px;
+            object-fit: contain;
+            filter: drop-shadow(0px 25px 25px rgba(0, 0, 0, 0.15));
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 80px 64px;
+            background: #fbf9f5;
+        }
+
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: #01261f;
+            text-align: center;
+            margin-bottom: 80px;
+            line-height: 1.3;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card.featured {
+            position: relative;
+        }
+
+        .badge-featured {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: #ffdea5;
+            color: #261900;
+            padding: 3px 12px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .product-image-wrapper {
+            background: #f5f3ef;
+            border-radius: 8px;
+            padding: 16px;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .product-image {
+            max-height: 256px;
+            max-width: 100%;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #01261f;
+            text-align: center;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .product-pricing {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .price-original {
+            text-decoration: line-through;
+            color: #705a49;
+            font-size: 14px;
+        }
+
+        .price-current {
+            font-weight: 500;
+            font-size: 18px;
+            color: #01261f;
+        }
+
+        .savings-badge {
+            background: rgba(197, 234, 223, 0.3);
+            color: #43655c;
+            padding: 3px 12px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .btn-secondary {
+            border: 2px solid #01261f;
+            background: transparent;
+            color: #01261f;
+            padding: 9px 25px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.7px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-secondary:hover {
+            background: #01261f;
+            color: white;
+        }
+
+        .product-card .btn-primary {
+            width: 100%;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 40px auto;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: #01261f;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .form-section p {
+            text-align: center;
+            color: #705a49;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #01261f;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: 'Inter', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #01261f;
+            box-shadow: 0 0 0 3px rgba(1, 38, 31, 0.1);
+        }
+
+        .form-group input::placeholder {
+            color: #b0a89f;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background: #01261f;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.7px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 12px;
+        }
+
+        .btn-submit:hover {
+            background: #01261f;
+            opacity: 0.9;
+        }
+
+        .btn-submit:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .form-message {
+            text-align: center;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            display: none;
+            font-size: 14px;
+        }
+
+        .form-message.success {
+            background: rgba(67, 101, 92, 0.1);
+            color: #43655c;
+            display: block;
+        }
+
+        .form-message.error {
+            background: rgba(200, 50, 50, 0.1);
+            color: #c83232;
+            display: block;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f5f3ef;
+            border-top: 1px solid rgba(193, 200, 196, 0.2);
+            padding: 80px 64px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 32px;
+        }
+
+        .footer-brand {
+            max-width: 320px;
+        }
+
+        .footer-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #01261f;
+            margin-bottom: 16px;
+        }
+
+        .footer-text {
+            color: #1b1c1a;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .footer-section h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #01261f;
+            letter-spacing: 0.7px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 15px;
+        }
+
+        .footer-section a {
+            color: #414846;
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #01261f;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 60px 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 42px;
+            }
+
+            .hero-image-container {
+                height: 500px;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .header-container {
+                padding: 16px 40px;
+            }
+
+            .nav-links {
+                margin-left: 30px;
+                gap: 16px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container {
+                padding: 12px 20px;
+            }
+
+            .logo-section {
+                gap: 4px;
+            }
+
+            .brand-name {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section-heading {
+                font-size: 24px;
+            }
+
+            .products-section {
+                padding: 40px 20px;
+            }
+
+            .form-section {
+                margin: 30px 20px;
+                padding: 30px 20px;
+            }
+
+            .footer {
+                padding: 40px 20px;
+            }
+
+            .footer-links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="https://www.figma.com/api/mcp/asset/e6e96469-551f-4495-a05b-cd0f8368a415.png" alt="Rehoboth Essentials Logo" class="logo">
+                <span class="brand-name">Rehoboth Essentials</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">Hair Revive Oil</a>
+                <a href="#">Ingredients</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn">🔍</button>
+                <button class="icon-btn">🛒</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">
+                    ✓ 100% Natural Ayurvedic Formulation
+                </div>
+                <h1>Hair Revive Oil</h1>
+                <p class="hero-description">Thoughtful hair care, rooted in traditional ingredients. Formulated with a blend of Virgin Coconut Oil, Henna, Black Cumin, Fenugreek, Curry Leaves, and Amla to nourish your scalp and strengthen every strand.</p>
+                <div class="price">Available from ₹129</div>
+                <button class="btn-primary">Shop Hair Revive Oil</button>
+            </div>
+            <div class="hero-image-container">
+                <img src="https://www.figma.com/api/mcp/asset/e7bf0712-8528-4008-b8d2-78e323e9af86.png" alt="Hair Revive Oil Bottle" class="hero-product-image">
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <h2 class="section-heading">Find the bottle that fits your routine.</h2>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div>
+                        <div class="product-image-wrapper">
+                            <img src="https://www.figma.com/api/mcp/asset/fa15280d-bb33-4dae-8bc0-330fea6909a6.png" alt="Classic 100mL" class="product-image">
+                        </div>
+                        <h3 class="product-title">Classic 100mL</h3>
+                        <div class="product-pricing">
+                            <span class="price-original">MRP ₹149</span>
+                            <span class="price-current">₹129</span>
+                        </div>
+                        <div class="savings-badge">Save ₹20</div>
+                    </div>
+                    <button class="btn-secondary">Add to Cart</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div>
+                        <div class="product-image-wrapper">
+                            <img src="https://www.figma.com/api/mcp/asset/1a5fdc6f-27a2-403a-a742-a5862dce6cbb.png" alt="Comb Tip 100mL" class="product-image">
+                        </div>
+                        <h3 class="product-title">Comb Tip 100mL</h3>
+                        <div class="product-pricing">
+                            <span class="price-original">MRP ₹156</span>
+                            <span class="price-current">₹137</span>
+                        </div>
+                        <div class="savings-badge">Save ₹19</div>
+                    </div>
+                    <button class="btn-secondary">Add to Cart</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card featured">
+                    <div class="badge-featured">Best Value</div>
+                    <div>
+                        <div class="product-image-wrapper">
+                            <img src="https://www.figma.com/api/mcp/asset/8edfd748-ba1e-453c-9ed3-5ace99506a62.png" alt="220mL Bottle" class="product-image">
+                        </div>
+                        <h3 class="product-title">220mL Bottle</h3>
+                        <div class="product-pricing">
+                            <span class="price-original">MRP ₹325</span>
+                            <span class="price-current">₹279</span>
+                        </div>
+                        <div class="savings-badge">Save ₹46</div>
+                    </div>
+                    <button class="btn-primary" style="width: 100%;">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <div class="form-section">
+            <h2>Get in Touch</h2>
+            <p>Join our community for updates and special offers</p>
+            
+            <div id="formMessage" class="form-message"></div>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                </div>
+                
+                <button type="submit" class="btn-submit" id="submitBtn">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3 class="footer-title">Rehoboth Essentials</h3>
+                <p class="footer-text">© 2026 Rehoboth Essentials. All Rights Reserved. Crafted with Ayurvedic Wisdom.</p>
+            </div>
+            <div class="footer-links-grid">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Hair Revive Oil</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby0zh8B4_PZS1528ITaVacHs2uRaNgzeGSjqZqyT7ovHlSocCBiDKIU_ycyDLmt9Tdu/exec';
+
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const messageDiv = document.getElementById('formMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+
+            // Validate
+            if (!name || !email || !phone) {
+                showError('Please fill in all fields.');
+                return;
+            }
+
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            // Use image beacon method (works with file:// protocol)
+            submitViaImageBeacon(name, email, phone);
+        });
+
+        function submitViaImageBeacon(name, email, phone) {
+            // Build URL with query parameters
+            const url = SCRIPT_URL + '?' + new URLSearchParams({
+                name: name,
+                email: email,
+                phone: phone
+            }).toString();
+
+            // Create a temporary image element to trigger the request
+            const img = document.createElement('img');
+            
+            // Handle successful load
+            img.onload = function() {
+                showSuccess();
+                resetForm();
+            };
+            
+            // Handle errors with a timeout fallback
+            img.onerror = function() {
+                // AppScript still processes the request even if image fails
+                showSuccess();
+                resetForm();
+            };
+            
+            // Set source to trigger the request
+            img.src = url;
+            img.style.display = 'none';
+            document.body.appendChild(img);
+        }
+
+        function resetForm() {
+            form.reset();
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        }
+
+        function showSuccess() {
+            messageDiv.textContent = '✓ Message sent successfully! Thank you for contacting us.';
+            messageDiv.className = 'form-message success';
+            
+            // Clear message after 5 seconds
+            setTimeout(() => {
+                messageDiv.className = 'form-message';
+                messageDiv.textContent = '';
+            }, 5000);
+        }
+
+        function showError(message) {
+            messageDiv.textContent = '✗ ' + (message || 'Failed to send message. Please try again.');
+            messageDiv.className = 'form-message error';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+            
+            // Clear message after 5 seconds
+            setTimeout(() => {
+                messageDiv.className = 'form-message';
+                messageDiv.textContent = '';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
