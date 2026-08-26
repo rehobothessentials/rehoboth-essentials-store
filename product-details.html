@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Revive Oil - Product Details | Rehoboth Essentials</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(90deg, #fbf9f5 0%, #fbf9f5 100%), linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+            color: #1b1c1a;
+            line-height: 1.6;
+        }
+
+        /* Header / Navigation */
+        .header {
+            backdrop-filter: blur(6px);
+            background: rgba(251, 249, 245, 0.8);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 16px 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #01261f;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            flex: 1;
+            margin-left: 60px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #705a49;
+            text-decoration: none;
+            letter-spacing: 0.7px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a.active {
+            color: #01261f;
+            border-bottom: 2px solid #01261f;
+            padding-bottom: 8px;
+        }
+
+        .nav-links a:hover {
+            color: #01261f;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: #2d1e00;
+            color: white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 80px 64px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 32px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.7px;
+        }
+
+        .breadcrumb a {
+            color: #705a49;
+            text-decoration: none;
+        }
+
+        .breadcrumb .current {
+            color: #01261f;
+        }
+
+        .breadcrumb-sep {
+            color: #705a49;
+            font-size: 12px;
+        }
+
+        /* Product Content Grid */
+        .product-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            margin-bottom: 80px;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            display: flex;
+            gap: 16px;
+        }
+
+        .thumbnails {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 120px;
+            background: #f5f3ef;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .thumbnail.active {
+            border-color: #01261f;
+            opacity: 1;
+        }
+
+        .thumbnail:hover {
+            opacity: 1;
+        }
+
+        .thumbnail img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .main-image-container {
+            flex: 1;
+            background: #f5f3ef;
+            border-radius: 8px;
+            padding: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 700px;
+        }
+
+        .main-image-container::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(52.56deg, rgba(228, 226, 222, 0.2) 0%, rgba(228, 226, 222, 0) 100%);
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        .main-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0px 25px 25px rgba(0, 0, 0, 0.15));
+            z-index: 1;
+        }
+
+        .badge-natural {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: #fbf9f5;
+            border: 1px solid rgba(193, 200, 196, 0.3);
+            padding: 4px 13px;
+            border-radius: 9999px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #705a49;
+            z-index: 2;
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        /* Product Info Section */
+        .product-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-header {
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(193, 200, 196, 0.3);
+            margin-bottom: 32px;
+        }
+
+        .product-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: #01261f;
+            line-height: 1.1;
+            letter-spacing: -1.12px;
+            margin-bottom: 8px;
+        }
+
+        .product-description {
+            color: #705a49;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .ratings {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .star {
+            font-size: 20px;
+        }
+
+        .rating-text {
+            color: #705a49;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-color: rgba(112, 90, 73, 0.3);
+        }
+
+        /* Variant Selector */
+        .variant-section {
+            margin-bottom: 32px;
+        }
+
+        .section-label {
+            font-size: 14px;
+            font-weight: 700;
+            color: #01261f;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .variant-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .variant-option {
+            background: white;
+            border: 1px solid rgba(193, 200, 196, 0.5);
+            padding: 17px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .variant-option.selected {
+            background: #f5f3ef;
+            border-color: #01261f;
+        }
+
+        .variant-name {
+            font-weight: 600;
+            color: #01261f;
+            font-size: 14px;
+        }
+
+        .variant-price {
+            text-align: right;
+        }
+
+        .variant-current-price {
+            font-weight: 600;
+            color: #01261f;
+            font-size: 14px;
+        }
+
+        .variant-original-price {
+            font-size: 12px;
+            color: #705a49;
+            text-decoration: line-through;
+        }
+
+        /* Quantity & Actions */
+        .quantity-actions {
+            margin-bottom: 32px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .quantity-selector {
+            background: #fbf9f5;
+            border: 1px solid rgba(193, 200, 196, 0.5);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            height: 56px;
+            padding: 1px;
+        }
+
+        .qty-btn {
+            background: transparent;
+            border: none;
+            width: 48px;
+            height: 100%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #01261f;
+            transition: background 0.3s ease;
+        }
+
+        .qty-btn:hover {
+            background: rgba(1, 38, 31, 0.05);
+        }
+
+        .qty-display {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            color: #01261f;
+        }
+
+        .add-to-cart-btn {
+            flex: 1;
+            background: white;
+            border: 2px solid #01261f;
+            color: #01261f;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.7px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .add-to-cart-btn:hover {
+            background: #01261f;
+            color: white;
+        }
+
+        .buy-now-btn {
+            width: 100%;
+            background: #01261f;
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.7px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .buy-now-btn:hover {
+            background: #01261f;
+            opacity: 0.9;
+        }
+
+        /* Trust Block */
+        .trust-block {
+            background: #f5f3ef;
+            border: 1px solid rgba(193, 200, 196, 0.2);
+            padding: 17px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .trust-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            font-size: 14px;
+            color: #705a49;
+        }
+
+        .trust-icon {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .trust-text strong {
+            font-weight: 600;
+        }
+
+        /* Accordions */
+        .details-section {
+            border-top: 1px solid rgba(193, 200, 196, 0.3);
+            padding: 16px 0;
+        }
+
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            color: #01261f;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            color: #705a49;
+        }
+
+        .accordion-icon {
+            width: 12px;
+            height: 7.4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0;
+        }
+
+        .accordion-content.open {
+            max-height: 500px;
+            padding: 16px 0;
+        }
+
+        .accordion-list {
+            list-style: none;
+            color: #705a49;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .accordion-list li {
+            margin-bottom: 12px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f5f3ef;
+            border-top: 1px solid rgba(193, 200, 196, 0.2);
+            padding: 80px 64px 24px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto 32px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #01261f;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: #414846;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-section h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #01261f;
+            letter-spacing: 0.7px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .footer-section a {
+            color: #414846;
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #01261f;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(193, 200, 196, 0.1);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 12px;
+            color: rgba(65, 72, 70, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .product-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .main-container {
+                padding: 60px 40px;
+            }
+
+            .product-title {
+                font-size: 42px;
+            }
+
+            .header-container {
+                padding: 16px 40px;
+            }
+
+            .nav-links {
+                margin-left: 30px;
+                gap: 16px;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 40px 20px;
+            }
+
+            .product-title {
+                font-size: 32px;
+            }
+
+            .header-container {
+                padding: 12px 20px;
+            }
+
+            .brand-name {
+                font-size: 18px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .gallery-section {
+                flex-direction: column-reverse;
+            }
+
+            .thumbnails {
+                flex-direction: row;
+                width: 100%;
+                height: 80px;
+            }
+
+            .thumbnail {
+                flex: 1;
+                height: 100%;
+            }
+
+            .main-image-container {
+                height: 400px;
+            }
+
+            .footer {
+                padding: 40px 20px 24px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="https://www.figma.com/api/mcp/asset/e6e96469-551f-4495-a05b-cd0f8368a415.png" alt="Logo" class="logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <span class="brand-name">Rehoboth Essentials</span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#" class="active">Hair Revive Oil</a>
+                <a href="#">Ingredients</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn">🔍</button>
+                <button class="icon-btn">
+                    🛒
+                    <span class="cart-badge">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="breadcrumb-sep">›</span>
+            <span class="current">Hair Revive Oil</span>
+        </div>
+
+        <!-- Product Content -->
+        <div class="product-content">
+            <!-- Gallery Section -->
+            <div class="gallery-section">
+                <div class="thumbnails">
+                    <div class="thumbnail active" data-image="https://www.figma.com/api/mcp/asset/fa15280d-bb33-4dae-8bc0-330fea6909a6.png">
+                        <img src="https://www.figma.com/api/mcp/asset/fa15280d-bb33-4dae-8bc0-330fea6909a6.png" alt="Thumbnail 1">
+                    </div>
+                    <div class="thumbnail" data-image="https://www.figma.com/api/mcp/asset/1a5fdc6f-27a2-403a-a742-a5862dce6cbb.png">
+                        <img src="https://www.figma.com/api/mcp/asset/1a5fdc6f-27a2-403a-a742-a5862dce6cbb.png" alt="Thumbnail 2">
+                    </div>
+                    <div class="thumbnail" data-image="https://www.figma.com/api/mcp/asset/8edfd748-ba1e-453c-9ed3-5ace99506a62.png">
+                        <img src="https://www.figma.com/api/mcp/asset/8edfd748-ba1e-453c-9ed3-5ace99506a62.png" alt="Thumbnail 3">
+                    </div>
+                </div>
+                <div class="main-image-container">
+                    <div class="badge-natural">
+                        ✓ 100% Natural
+                    </div>
+                    <img id="mainImage" src="https://www.figma.com/api/mcp/asset/fa15280d-bb33-4dae-8bc0-330fea6909a6.png" alt="Hair Revive Oil" class="main-image">
+                </div>
+            </div>
+
+            <!-- Product Info Section -->
+            <div class="product-info">
+                <div class="product-header">
+                    <h1 class="product-title">Hair Revive Oil</h1>
+                    <p class="product-description">A traditional ingredient-based hair oil crafted with Ayurvedic wisdom to deeply nourish the scalp, strengthen roots, and promote healthy, vibrant hair growth.</p>
+                    
+                    <div class="ratings" style="margin-top: 16px;">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">☆</span>
+                        </div>
+                        <span class="rating-text">4.8 (124 Reviews)</span>
+                    </div>
+                </div>
+
+                <!-- Variant Selector -->
+                <div class="variant-section">
+                    <div class="section-label">Select Size & Applicator</div>
+                    <div class="variant-options">
+                        <div class="variant-option selected" data-variant="classic" data-price="129" data-mrp="149">
+                            <span class="variant-name">Classic (Flip Tip) 100mL</span>
+                            <div class="variant-price">
+                                <div class="variant-current-price">₹129</div>
+                                <div class="variant-original-price">MRP ₹149</div>
+                            </div>
+                        </div>
+                        <div class="variant-option" data-variant="comb" data-price="137" data-mrp="156">
+                            <span class="variant-name">Comb Tip 100mL</span>
+                            <div class="variant-price">
+                                <div class="variant-current-price">₹137</div>
+                                <div class="variant-original-price">MRP ₹156</div>
+                            </div>
+                        </div>
+                        <div class="variant-option" data-variant="bottle" data-price="279" data-mrp="325">
+                            <span class="variant-name">220mL Bottle</span>
+                            <div class="variant-price">
+                                <div class="variant-current-price">₹279</div>
+                                <div class="variant-original-price">MRP ₹325</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quantity & Actions -->
+                <div class="quantity-actions">
+                    <div class="quantity-selector">
+                        <button class="qty-btn" id="qtyMinus">−</button>
+                        <div class="qty-display" id="qtyDisplay">1</div>
+                        <button class="qty-btn" id="qtyPlus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn">
+                        🛒 Add to Cart
+                    </button>
+                </div>
+
+                <button class="buy-now-btn">Buy Now</button>
+
+                <!-- Trust Block -->
+                <div class="trust-block">
+                    <div class="trust-item">
+                        <span>💳</span>
+                        <span class="trust-text">Secure Payment via <strong>Cashfree</strong></span>
+                    </div>
+                    <div class="trust-item">
+                        <span>📦</span>
+                        <span class="trust-text">Reliable Delivery partner <strong>Shiprocket</strong></span>
+                    </div>
+                </div>
+
+                <!-- Accordions -->
+                <div>
+                    <div class="details-section">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            Benefits
+                            <div class="accordion-icon">▲</div>
+                        </div>
+                        <div class="accordion-content open">
+                            <ul class="accordion-list">
+                                <li>Deeply nourishes scalp and hair follicles.</li>
+                                <li>Reduces hair fall and promotes thick, healthy growth.</li>
+                                <li>Adds a natural, non-greasy shine to dull hair.</li>
+                                <li>Soothes irritated scalp with cooling herbs.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="details-section">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            Key Ingredients
+                            <div class="accordion-icon">▼</div>
+                        </div>
+                        <div class="accordion-content">
+                            <p style="color: #705a49; font-size: 16px;">Virgin Coconut Oil, Henna, Black Cumin, Fenugreek, Curry Leaves, Amla, Brahmi, and traditional Ayurvedic herbs.</p>
+                        </div>
+                    </div>
+
+                    <div class="details-section">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            How to Use
+                            <div class="accordion-icon">▼</div>
+                        </div>
+                        <div class="accordion-content">
+                            <ol style="color: #705a49; font-size: 16px; margin-left: 20px;">
+                                <li>Warm the oil slightly (optional) for better absorption.</li>
+                                <li>Apply generously to the scalp and hair roots.</li>
+                                <li>Massage gently for 10-15 minutes in circular motions.</li>
+                                <li>Leave for at least 2-3 hours or overnight for deep nourishment.</li>
+                                <li>Wash off with a mild shampoo and lukewarm water.</li>
+                                <li>Use 2-3 times a week for best results.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="details-section">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            Storage & Care
+                            <div class="accordion-icon">▼</div>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="accordion-list">
+                                <li>Store in a cool, dry place away from direct sunlight.</li>
+                                <li>Keep away from excessive heat and moisture.</li>
+                                <li>Close the cap tightly after each use.</li>
+                                <li>Use within 12 months from the date of opening.</li>
+                                <li>Do not refrigerate.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="details-section">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            Suitable For
+                            <div class="accordion-icon">▼</div>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="accordion-list">
+                                <li>All hair types (dry, oily, combination)</li>
+                                <li>Sensitive and irritated scalps</li>
+                                <li>Hair prone to breakage and hair fall</li>
+                                <li>Dull and lifeless hair</li>
+                                <li>Men and women of all ages</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="details-section">
+                        <div class="accordion-header" onclick="toggleAccordion(this)">
+                            Important Info
+                            <div class="accordion-icon">▼</div>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="accordion-list">
+                                <li>For external use only.</li>
+                                <li>Discontinue use if irritation occurs. Perform a patch test before full application.</li>
+                                <li>Keep away from children and pets.</li>
+                                <li>Avoid contact with eyes. In case of contact, rinse immediately with water.</li>
+                                <li>Consult a dermatologist if you have a specific scalp condition.</li>
+                                <li>This product is not tested on animals and is cruelty-free.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Rehoboth Essentials</h3>
+                <p>Crafted with Ayurvedic Wisdom.</p>
+                <div style="display: flex; gap: 16px; margin-top: 16px;">
+                    <a href="#" style="font-size: 20px;">📱</a>
+                    <a href="#" style="font-size: 20px;">👍</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Shop</h4>
+                <a href="#">All Products</a>
+                <a href="#">Best Sellers</a>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Track Order</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Wholesale</a>
+            </div>
+            <div></div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 Rehoboth Essentials. All Rights Reserved. Crafted with Ayurvedic Wisdom.
+        </div>
+    </footer>
+
+    <script>
+        // Thumbnail Gallery
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                document.getElementById('mainImage').src = this.dataset.image;
+            });
+        });
+
+        // Variant Selector
+        document.querySelectorAll('.variant-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.variant-option').forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+            });
+        });
+
+        // Quantity Selector
+        let quantity = 1;
+        document.getElementById('qtyMinus').addEventListener('click', () => {
+            if (quantity > 1) {
+                quantity--;
+                document.getElementById('qtyDisplay').textContent = quantity;
+            }
+        });
+
+        document.getElementById('qtyPlus').addEventListener('click', () => {
+            quantity++;
+            document.getElementById('qtyDisplay').textContent = quantity;
+        });
+
+        // Accordion Toggle
+        function toggleAccordion(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.accordion-icon');
+            
+            document.querySelectorAll('.accordion-content').forEach(c => {
+                if (c !== content) {
+                    c.classList.remove('open');
+                    c.previousElementSibling.querySelector('.accordion-icon').textContent = '▼';
+                }
+            });
+
+            content.classList.toggle('open');
+            icon.textContent = content.classList.contains('open') ? '▲' : '▼';
+        }
+    </script>
+</body>
+</html>
